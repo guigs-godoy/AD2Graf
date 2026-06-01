@@ -22,13 +22,13 @@ namespace AD2Graf.Models
         public Servico? Servico { get; set; }
 
         [Required(ErrorMessage = "Informe a quantidade de itens")]
-        [Range(1, 100000, ErrorMessage = "A quantidade deve ser entre 1 e 100.000")]
+        [Range(1, 100000, ErrorMessage = "A quantidade deve ser maior que zero")]
         [Display(Name = "Quantidade")]
         public int Quantidade { get; set; }
 
         public StatusPedido Status { get; set; } = StatusPedido.Pendente;
 
-        [Required(ErrorMessage = "Informe a data de criação do pedido")]
+        [Required(ErrorMessage = "Informe a data de entrega do pedido")]
         public DateTime DataCriacao { get; set; } = DateTime.Now;
     }
 
